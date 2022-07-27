@@ -6,7 +6,7 @@
 import json
 
 # ключей больше, чем значений (ключи дублируются)
-l1 = ['a', 'b', 'c', 'd', 'd', 'd', 'e', 'f']
+l1 = ['a', 'b', 'c', 'd', 'd', 'd', 'e', 'f', 'f', 'g']
 l2 = [1, 2, 3, 4, 5]
 
 # значений большеб чем ключей
@@ -15,7 +15,7 @@ l4 = [1, 2, 3, 4, 5, 6]
 
 
 def gen_dict(key_list, value_list, json_format=True):
-    """ json_format, если True, то вернёт json-объект
+    """ json_format, если True, то вернёт json-объект, поумодчанию возвращает dict
     """
     dct = {}
 
@@ -31,7 +31,7 @@ def gen_dict(key_list, value_list, json_format=True):
 
 
 def remove_duplicates(lst):
-    """Исключение дубликатов в списке
+    """Исключение дубликатов-ключей в списке
     """
     new_lst = []
     for x in lst:

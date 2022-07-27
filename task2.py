@@ -3,16 +3,17 @@
     By considering the terms in this sequence whose values do not exceed seven million, find the sum of the even-valued
     terms.
 """
+
 fibonacci_numbers = [3, 4]
 list_endpoint = 7000000
 
-while fibonacci_numbers[-1] < 7000000:
-    res = fibonacci_numbers[-2] + fibonacci_numbers[-1]
-    if res > list_endpoint:
+while fibonacci_numbers[-1] <= 7000000:
+    last_namber = fibonacci_numbers[-2] + fibonacci_numbers[-1]
+    if last_namber > list_endpoint:
         break
-    fibonacci_numbers.append(res)
+    fibonacci_numbers.append(last_namber)
 
-sum_even_numbers = sum(x for x in fibonacci_numbers if x % 2 == 0)
+sum_even_numbers = sum([x for x in fibonacci_numbers if x % 2 == 0])
 
 print(fibonacci_numbers)
 print(sum_even_numbers)
